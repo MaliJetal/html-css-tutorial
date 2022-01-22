@@ -351,9 +351,105 @@ nav .btn:hover {
   background-color: #333;
 }
 /* ############ 5. CTA ############ */
+.cta {
+  background-size: cover;
+  color: #fff;
+  margin: 2rem auto;
+  padding: 2rem;
+  text-shadow: 1px 1px 1px rgb(0 0 0 / 50%);
+}
 
+.cta1 {
+  background: url("../resources/web-app-images/ctaBG1_sm.jpg") no-repeat center
+    center;
+}
+
+.cta2 {
+  background: url("../resources/web-app-images/ctaBG2_sm.jpg") no-repeat center
+    center;
+}
+
+.cta3 {
+  background: url("../resources/web-app-images/ctaBG3_sm.jpg") no-repeat center
+    center;
+}
+
+.cta h1 {
+  margin-left: 1rem;
+}
+
+.cta p {
+  border-left: 2px solid #fff;
+  padding-left: 1rem;
+  max-width: 700px;
+}
 
 /* ############ 6. Team ############ */
+
+.team {
+  margin: 1rem;
+}
+
+.team h1 {
+  text-align: center;
+  color: #39bae6;
+}
+
+.team p {
+  margin-bottom: 1rem;
+}
+
+.teamMembers {
+  list-style-type: none;
+  margin: 1rem auto;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  align-items: center;
+}
+
+.teamMembers li {
+  grid-row: 1/2;
+}
+
+.teamMembers li:nth-child(1) {
+  grid-column: 1/4;
+  order: 1;
+}
+
+.teamMembers li:nth-child(2) {
+  grid-column: 3/6;
+}
+
+.teamMembers li:nth-child(3) {
+  grid-column: 4/8;
+  order: 1;
+  text-align: center;
+}
+
+.teamMembers li:nth-child(4) {
+  grid-column: -3/6;
+  text-align: right;
+}
+
+.teamMembers li:nth-child(5) {
+  grid-column: -4/-1;
+  text-align: right;
+}
+
+.teamMembers li:hover {
+  order: 2;
+}
+
+.teamMembers img {
+  border-radius: 50%;
+  width: 80%;
+  box-shadow: 1px 1px 3px #fff, 2px 2px 6px rgb(28 121 138 / 50%);
+  border: solid 2px rgba(255, 255, 255, 0.8);
+}
+
+.teamMembers li:nth-child(3) img {
+  width: 70%;
+}
 
 /* ############ 7. Problem ############ */
 
@@ -459,6 +555,59 @@ nav .btn:hover {
 
   .trips p {
     flex: 3;
+  }
+
+  /* ######### 10a-iv. CTA summaries, Large screen rules ######### */
+  .cta {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cta1 {
+    background-image: url("../resources/web-app-images/ctaBG1_lg.jpg");
+  }
+
+  .cta2 {
+    background-image: url("../resources/web-app-images/ctaBG2_lg.jpg");
+  }
+
+  .cta3 {
+    background-image: url("../resources/web-app-images/ctaBG3_lg.jpg");
+  }
+
+  .cta h1 {
+    margin-right: 1rem;
+  }
+
+  /* ######### 10a-v. Team, Large screen rules ######### */
+  .team {
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    grid-template-rows: repeat(2, auto);
+  }
+
+  .teamMembers {
+    order: 1;
+    grid-column: 1/-1;
+  }
+
+  .team p {
+    border-right: solid 1px #dedede;
+    padding-right: 1rem;
+    order: 2;
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
+  .team h1 {
+    order: 2;
+    grid-column: 2/-1;
+    align-self: center;
   }
 }
 /* ############ 10b. Media Query, (min-width: 1000px) ############ */
